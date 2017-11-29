@@ -1,0 +1,42 @@
+﻿@model Contactos.Domain.Models.SocialPerfils
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SocialPerfils</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PerfilGeneral.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerfilGeneral.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionSocialPerfil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionSocialPerfil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SocialPerfil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SocialPerfil)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SocialPerfilId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

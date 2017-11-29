@@ -1,0 +1,42 @@
+﻿@model Contactos.Domain.Models.Addresses
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Addresses</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PerfilGeneral.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerfilGeneral.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AddressId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

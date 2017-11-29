@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Contactos.Domain.BussinessPerfils>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PerfilGeneral.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BussinessPerfilStudyDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BussinessPerfilWorkDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BussinessPerfilPositionDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PerfilGeneral.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BussinessPerfilStudyDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BussinessPerfilWorkDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BussinessPerfilPositionDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BussinessPerfilId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BussinessPerfilId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BussinessPerfilId })
+        </td>
+    </tr>
+}
+
+</table>
